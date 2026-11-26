@@ -1,167 +1,256 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rahul Mittal | Research Profile</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #333;
-            line-height: 1.7;
-        }
-
-        header {
-            background: #142d4e;
-            color: white;
-            padding: 65px 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 42px;
-            margin-bottom: 5px;
-        }
-
-        header p {
-            font-size: 18px;
-            color: #cbd9e8;
-        }
-
-        nav {
-            background: #203e60;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 15px;
-        }
-
-        nav a:hover {
-            color: #8fc7ff;
-        }
-
-        section {
-            max-width: 900px;
-            margin: 35px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-        }
-
-        h2 {
-            color: #173b63;
-            border-bottom: 2px solid #dce5ef;
-            padding-bottom: 10px;
-        }
-
-        footer {
-            background: #142d4e;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 32px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-            }
-
-            section {
-                margin: 20px 12px;
-                padding: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic and research portfolio of Rahul Mittal, physicist working on chromatin organisation, 3D genome architecture and molecular simulations.">
+  <title>Rahul Mittal | Academic & Research Profile</title>
+  <style>
+    :root {
+      --navy: #142d4e;
+      --blue: #285b89;
+      --ink: #243247;
+      --muted: #607086;
+      --paper: #ffffff;
+      --bg: #f3f6fa;
+      --line: #dce4ee;
+      --accent: #dcecf9;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font: 16px/1.7 Arial, Helvetica, sans-serif;
+    }
+    a { color: var(--blue); }
+    .topbar {
+      position: sticky; top: 0; z-index: 10; background: rgba(20,45,78,.97);
+      box-shadow: 0 2px 12px rgba(10,25,45,.12);
+    }
+    .nav {
+      max-width: 1080px; margin: auto; padding: 13px 22px;
+      display: flex; justify-content: space-between; align-items: center; gap: 18px;
+    }
+    .brand { color: white; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 17px; }
+    .navlinks a { color: #e7eff8; text-decoration: none; font-size: 14px; }
+    .navlinks a:hover { color: white; text-decoration: underline; }
+    .hero {
+      background: linear-gradient(130deg, #142d4e, #285b89);
+      color: white; padding: 76px 22px 68px;
+    }
+    .hero-inner { max-width: 980px; margin: auto; }
+    .eyebrow { color: #c5d9ed; text-transform: uppercase; letter-spacing: 2px; font-size: 12px; font-weight: 700; }
+    h1 { font-size: clamp(38px, 6vw, 58px); line-height: 1.12; margin: 12px 0; }
+    .subtitle { max-width: 760px; color: #e0eaf4; font-size: 19px; margin: 0 0 25px; }
+    .hero-meta { color: #d1dfed; font-size: 14px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 27px; }
+    .btn {
+      display: inline-block; border-radius: 7px; padding: 10px 17px;
+      font-weight: 700; text-decoration: none; border: 1px solid white;
+    }
+    .btn.primary { background: white; color: var(--navy); }
+    .btn.outline { color: white; }
+    main { max-width: 980px; margin: 34px auto 60px; padding: 0 20px; }
+    section {
+      background: var(--paper); padding: 30px 34px; margin: 22px 0;
+      border: 1px solid var(--line); border-radius: 12px;
+      box-shadow: 0 5px 18px rgba(25,48,75,.035);
+    }
+    h2 { color: var(--navy); font-size: 25px; margin: 0 0 18px; }
+    h3 { color: #24496e; font-size: 18px; margin: 0 0 5px; }
+    p { margin: 8px 0 12px; }
+    .muted { color: var(--muted); }
+    .item { padding: 17px 0; border-top: 1px solid var(--line); }
+    .item:first-of-type { border-top: 0; padding-top: 0; }
+    .item-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .date { color: var(--muted); font-size: 14px; white-space: nowrap; }
+    ul { padding-left: 22px; margin: 9px 0; }
+    li { margin: 5px 0; }
+    .taglist { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 12px; }
+    .tag { background: #edf4fa; color: #254d73; border: 1px solid #d9e7f3; padding: 5px 10px; border-radius: 20px; font-size: 13px; }
+    .contact a { overflow-wrap: anywhere; }
+    footer { text-align: center; padding: 25px 18px; background: var(--navy); color: #dce7f2; font-size: 14px; }
+    @media (max-width: 680px) {
+      .nav { align-items: flex-start; flex-direction: column; }
+      .navlinks { gap: 10px 15px; }
+      .hero { padding: 55px 20px; }
+      section { padding: 23px 20px; }
+      .subtitle { font-size: 17px; }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">RAHUL MITTAL</a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
 
-<header>
-    <h1>Rahul Mittal</h1>
-    <p>Researcher | Molecular Biophysics | Chromatin Biology</p>
-    <p>Welcome to my academic website</p>
-</header>
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <div class="eyebrow">Academic &amp; Research Profile</div>
+      <h1>Rahul Mittal</h1>
+      <p class="subtitle">Research in chromatin organisation, 3D genome architecture, polymer physics and molecular simulations.</p>
+      <div class="hero-meta">New Delhi, India · Physics · Computational and Integrative Sciences</div>
+      <div class="actions">
+        <a class="btn primary" href="Rahul_Mittal_CV.pdf" download>Download CV (PDF)</a>
+        <a class="btn outline" href="#publications">View Publications</a>
+      </div>
+    </div>
+  </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a physicist with research experience in computational and theoretical approaches to biological and physical systems. My doctoral research at the School of Computational and Integrative Sciences, Jawaharlal Nehru University, focused on physics-informed modelling of chromosome dynamics and 3D genome organisation.</p>
+      <p>My work combines polymer physics, Langevin molecular dynamics, experimentally informed structural constraints and high-performance computing to investigate genomic organisation across local and global scales.</p>
+    </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        Welcome to my academic website.
-        I am interested in understanding the organisation
-        and dynamics of biological systems through
-        computational and theoretical approaches.
-    </p>
-    <p>
-        This website presents my research interests,
-        academic activities, publications and projects.
-    </p>
-</section>
+    <section id="research">
+      <h2>Research Interests</h2>
+      <div class="taglist">
+        <span class="tag">Chromatin organisation</span>
+        <span class="tag">3D genome architecture</span>
+        <span class="tag">Hi-C and Micro-C</span>
+        <span class="tag">Polymer physics</span>
+        <span class="tag">Molecular dynamics</span>
+        <span class="tag">Langevin dynamics</span>
+        <span class="tag">Computational biophysics</span>
+        <span class="tag">GPU-accelerated simulation</span>
+        <span class="tag">Physics-informed modelling</span>
+      </div>
+    </section>
 
-<section id="research">
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Chromatin Organisation and 3D Genome Architecture</li>
-        <li>Hi-C and Micro-C Data Analysis</li>
-        <li>Molecular Dynamics Simulations</li>
-        <li>Polymer Physics and Biophysics</li>
-        <li>Chromatin Structure and Dynamics</li>
-    </ul>
-</section>
+    <section id="experience">
+      <h2>Research Experience</h2>
+      <div class="item">
+        <div class="item-head">
+          <h3>Ph.D. Researcher — Jawaharlal Nehru University</h3>
+          <span class="date">Dec 2020 – July 2026 · New Delhi</span>
+        </div>
+        <p class="muted">School of Computational and Integrative Sciences</p>
+        <ul>
+          <li>Developed a polymer physics-based model using Langevin molecular dynamics to simulate chromosome dynamics and investigate 3D genome organisation at local and global scales.</li>
+          <li>Designed and implemented a GPU-accelerated molecular dynamics simulator in CUDA-C for larger chromosome systems.</li>
+          <li>Achieved approximately 25× speedup over the corresponding CPU-based simulator through GPU parallelisation and computational optimisation.</li>
+          <li>Integrated physics-based modelling with experimentally informed structural constraints to reproduce high-resolution organisation of genomic loci.</li>
+          <li>Developed computational workflows using C/CUDA, Python, R, Bash, Linux and HPC clusters.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <h3>Graduate Researcher, Quantum Mechanics — IIT Mandi</h3>
+          <span class="date">Feb 2019 – June 2019 · Mandi</span>
+        </div>
+        <ul>
+          <li>Developed an analytical framework for quantum-particle transmission through a periodic array of Dirac delta potentials.</li>
+          <li>Derived generalised wave functions and transmission probabilities for coupled quantum states.</li>
+          <li>Applied Green's function techniques to analyse transmission through a Dirac-comb potential.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <h3>Research Intern, Molecular Dynamics — IIT Mandi</h3>
+          <span class="date">June 2019 – Dec 2019 · Mandi</span>
+        </div>
+        <ul>
+          <li>Developed a C-based molecular dynamics simulation code to model polymer-chain dynamics in a fluid environment.</li>
+          <li>Implemented angular potentials and geometric restrictions directly in Cartesian coordinates.</li>
+          <li>Applied numerical simulation and computational physics techniques to investigate polymer dynamics.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-head">
+          <h3>Research Intern, Quantum Mechanics — IIT Mandi</h3>
+          <span class="date">June 2018 – Aug 2018 · Mandi</span>
+        </div>
+        <ul>
+          <li>Derived an analytical solution for quantum-particle transmission through a semi-infinite Dirac-comb potential.</li>
+          <li>Used the Green's function method to obtain the transmitted-particle wave function and analyse periodic-potential effects.</li>
+        </ul>
+      </div>
+    </section>
 
-<section id="publications">
-    <h2>Publications</h2>
-    <p>
-        Research publications and scientific contributions
-        will be listed here.
-    </p>
-</section>
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="item">
+        <h3>An experimentally-informed polymer model reveals high resolution organization of genomic loci</h3>
+        <p>Mittal, R., Heermann, D., &amp; Bhattacherjee, A. <em>Nature Communications</em>, 17, 2338 (2026).</p>
+        <p><a href="https://doi.org/10.1038/s41467-026-68928-w" target="_blank" rel="noopener">https://doi.org/10.1038/s41467-026-68928-w</a> <span class="date">· February 2026</span></p>
+      </div>
+      <div class="item">
+        <h3>A latent interaction landscape inferred from Micro-C encodes chromatin regulatory identity and conformational diversity beyond contact frequency</h3>
+        <p>Mittal, R., Keshava Priyadarshini, K., &amp; Bhattacherjee, A. <em>Communications Biology</em>.</p>
+        <p class="muted">Manuscript under review.</p>
+      </div>
+      <div class="item">
+        <h3>Learning Chromatin Interaction Landscapes from Micro-C via Maximum Entropy Surrogates</h3>
+        <p>Mittal, R., Bhardwaj, S., &amp; Bhattacherjee, A. <em>Journal of Physical Chemistry B</em>.</p>
+        <p class="muted">Manuscript under review.</p>
+      </div>
+    </section>
 
-<section id="projects">
-    <h2>Research Projects</h2>
-    <p>
-        Details of ongoing and completed research projects
-        will be added here.
-    </p>
-</section>
+    <section id="education">
+      <h2>Education</h2>
+      <div class="item">
+        <div class="item-head"><h3>Ph.D. in Physics — Jawaharlal Nehru University</h3><span class="date">Dec 2020 – July 2026</span></div>
+        <p class="muted">School of Computational and Integrative Sciences · CGPA: 7.66/9.00</p>
+        <p><strong>Thesis:</strong> Physics-informed Modelling and Machine Learning Approaches to 3D Genome Organization.</p>
+        <p><strong>Training:</strong> GPU Computing, Programming in R and Python, Biomolecular Simulation, Bioinformatics Algorithms.</p>
+      </div>
+      <div class="item">
+        <div class="item-head"><h3>M.S. in Physics — Indian Institute of Technology Mandi</h3><span class="date">2017 – 2019</span></div>
+        <p class="muted">CGPA: 8.23/10.00</p>
+        <p><strong>Thesis:</strong> Transition through Multi-State Dirac-Comb.</p>
+        <p><strong>Coursework:</strong> Computational Methods for Physicists, Molecular Simulations, Statistical Mechanics, Mathematical Physics, Linear Algebra, Quantum Mechanics and Classical Mechanics.</p>
+      </div>
+      <div class="item">
+        <div class="item-head"><h3>B.S. in Physics — University of Rajasthan</h3><span class="date">2015 – 2017</span></div>
+        <p>First Division.</p>
+      </div>
+    </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>GitHub: Scor8R</p>
-    <p>Email: Add your email address here.</p>
-    <p>Google Scholar: Add your profile link here.</p>
-</section>
+    <section id="achievements">
+      <h2>Leadership &amp; Achievements</h2>
+      <h3>Conference Presenter · 2022–2024</h3>
+      <p>Presented research on computational modelling and simulations of physical and biological systems at ICTS Bengaluru, JNU New Delhi and IIT Bombay, communicating interdisciplinary research to audiences across physics, biology, chemistry and computational science.</p>
+      <h3>Academic &amp; Competitive Achievements</h3>
+      <ul>
+        <li>JNUEE 2020: All India Rank 1</li>
+        <li>CSIR-NET JRF Physics 2020: All India Rank 170</li>
+        <li>GATE Physics 2021: All India Rank 2022</li>
+        <li>IIT JAM Physics 2017: All India Rank 897</li>
+      </ul>
+    </section>
 
-<footer>
-    <p>© 2026 Rahul Mittal | Academic Website</p>
-</footer>
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <p><strong>Programming:</strong> C, CUDA-C, Python, R, Bash/Shell scripting</p>
+      <p><strong>Computational Methods:</strong> Molecular dynamics, Langevin dynamics, polymer physics, numerical simulation, statistical physics and scientific computing</p>
+      <p><strong>High-Performance Computing:</strong> GPU computing, CUDA, parallel computing and HPC clusters</p>
+      <p><strong>Scientific &amp; Computational Biology:</strong> 3D genome organisation, biomolecular simulation, polymer modelling, bioinformatics algorithms and physics-informed modelling</p>
+      <p><strong>Software:</strong> Mathematica, LaTeX, Linux, Windows and MS Office</p>
+    </section>
 
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:rahulmittal101296@gmail.com">rahulmittal101296@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rahul-mittal-3542a6150/" target="_blank" rel="noopener">linkedin.com/in/rahul-mittal-3542a6150</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Scor8R" target="_blank" rel="noopener">github.com/Scor8R</a></p>
+      <p><strong>Location:</strong> New Delhi, India</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Rahul Mittal · Academic &amp; Research Profile</footer>
 </body>
 </html>
