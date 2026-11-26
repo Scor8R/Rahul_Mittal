@@ -22,3 +22,15 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    max-width: 35vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
