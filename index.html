@@ -1,20 +1,167 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rahul Mittal | Research Profile</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #142d4e;
+            color: white;
+            padding: 65px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #cbd9e8;
+        }
+
+        nav {
+            background: #203e60;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #8fc7ff;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 35px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #173b63;
+            border-bottom: 2px solid #dce5ef;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            background: #142d4e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            section {
+                margin: 20px 12px;
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Welcome to My Website!</h1>
+<header>
+    <h1>Rahul Mittal</h1>
+    <p>Researcher | Molecular Biophysics | Chromatin Biology</p>
+    <p>Welcome to my academic website</p>
+</header>
 
-    <p>This website is hosted using GitHub Pages.</p>
+<nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <button onclick="showMessage()">
-        Click Me
-    </button>
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Welcome to my academic website.
+        I am interested in understanding the organisation
+        and dynamics of biological systems through
+        computational and theoretical approaches.
+    </p>
+    <p>
+        This website presents my research interests,
+        academic activities, publications and projects.
+    </p>
+</section>
 
-    <script src="script.js"></script>
+<section id="research">
+    <h2>Research Interests</h2>
+    <ul>
+        <li>Chromatin Organisation and 3D Genome Architecture</li>
+        <li>Hi-C and Micro-C Data Analysis</li>
+        <li>Molecular Dynamics Simulations</li>
+        <li>Polymer Physics and Biophysics</li>
+        <li>Chromatin Structure and Dynamics</li>
+    </ul>
+</section>
+
+<section id="publications">
+    <h2>Publications</h2>
+    <p>
+        Research publications and scientific contributions
+        will be listed here.
+    </p>
+</section>
+
+<section id="projects">
+    <h2>Research Projects</h2>
+    <p>
+        Details of ongoing and completed research projects
+        will be added here.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>GitHub: Scor8R</p>
+    <p>Email: Add your email address here.</p>
+    <p>Google Scholar: Add your profile link here.</p>
+</section>
+
+<footer>
+    <p>© 2026 Rahul Mittal | Academic Website</p>
+</footer>
+
 </body>
 </html>
